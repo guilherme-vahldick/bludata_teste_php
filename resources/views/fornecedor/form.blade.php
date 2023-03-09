@@ -92,7 +92,7 @@
                         <label for="data_nascimento">Data de Nascimento</label>
                         <input type="date" class="form-control" id="data_nascimento" name="data_nascimento"
                             aria-describedby="dataNascimento" placeholder="00/00/0000"
-                                value="{{ (isset($fornecedor)) ? $fornecedor->data_nascimento->format('Y-m-d') : old('data_nascimento') }}"
+                                value="{{ (isset($fornecedor) && $fornecedor->data_nascimento !== null) ? $fornecedor->data_nascimento->format('Y-m-d') : old('data_nascimento') }}"
                                     {!! (isset($fornecedor) && $fornecedor->tipo_pessoa == 'F') ? ' required=""' : '' !!}
                                         {!! (!isset($fornecedor)) ? ' required=""' : '' !!}>
                         <small id="dataNascimento" class="form-text text-muted">Digite sua data de nascimento em formato 00/00/0000.</small>

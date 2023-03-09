@@ -6,6 +6,11 @@ Para compilar o projeto e necessário PHP versão ^7.1.3, e utilizar os comandos
 
 ```
 composer install
+```
+
+Criar banco de dados, e após criar arquivo .env apontando para o banco, executar comandos abaixo para criar e popular tabelas:
+
+```
 php artisan migrate
 php artisan db:seed
 ```

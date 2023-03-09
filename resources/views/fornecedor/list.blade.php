@@ -101,6 +101,6 @@
             </tbody>
         </table>
     </div>
-    {{ $fornecedores->links('vendor.pagination.bootstrap-4') }}
+    {{ $fornecedores->appends(request()->input())->links('vendor.pagination.bootstrap-4') }}
 </div>
 @endsection

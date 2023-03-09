@@ -71,7 +71,7 @@
                         {{ $fornecedor->cnpj }}
                     </td>
                     <td scope="row">{{ $fornecedor->empresa->nome }}</td>
-                    <td scope="row">{{ optional($fornecedor->data_nascimento)->format('d/m/Y') }}</td>
+                    <td scope="row">{{ optional($fornecedor->created_at)->format('d/m/Y') }}</td>
                     <td scope="row">
                         <div class="d-flex align-items-center">
                             <a href="{{ route('fornecedor.edit', $fornecedor->id) }}" class="btn btn-primary mr-3">

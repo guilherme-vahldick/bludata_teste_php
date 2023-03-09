@@ -80,7 +80,9 @@
                     <div class="form-group">
                         <label for="rg">RG</label>
                         <input type="text" class="form-control" id="rg" name="rg" aria-describedby="rgPessoa"
-                            placeholder="Número do RG" value="{{ (isset($fornecedor)) ? $fornecedor->rg : old('rg') }}" required>
+                            placeholder="Número do RG" value="{{ (isset($fornecedor)) ? $fornecedor->rg : old('rg') }}"
+                                {!! (isset($fornecedor) && $fornecedor->tipo_pessoa == 'F') ? ' required=""' : '' !!}
+                                    {!! (!isset($fornecedor)) ? ' required=""' : '' !!}>
                         <small id="rgPessoa" class="form-text text-muted">Digite o número do seu RG conforme seu documento de identidade.</small>
                     </div>
                 </div>
@@ -90,7 +92,9 @@
                         <label for="data_nascimento">Data de Nascimento</label>
                         <input type="date" class="form-control" id="data_nascimento" name="data_nascimento"
                             aria-describedby="dataNascimento" placeholder="00/00/0000"
-                                value="{{ (isset($fornecedor)) ? $fornecedor->data_nascimento->format('Y-m-d') : old('data_nascimento') }}" required>
+                                value="{{ (isset($fornecedor)) ? $fornecedor->data_nascimento->format('Y-m-d') : old('data_nascimento') }}"
+                                    {!! (isset($fornecedor) && $fornecedor->tipo_pessoa == 'F') ? ' required=""' : '' !!}
+                                        {!! (!isset($fornecedor)) ? ' required=""' : '' !!}>
                         <small id="dataNascimento" class="form-text text-muted">Digite sua data de nascimento em formato 00/00/0000.</small>
                     </div>
                 </div>
@@ -180,11 +184,15 @@
             if (value == 'J') {
                 $('.hidde-juridica')
                     .hide()
-                    .prop('required', false);
+                    .find('input')
+                    .prop('required', false)
+                    .removeAttr('required');
             } else {
                 $('.hidde-juridica')
                     .show()
-                    .prop('required', true);
+                    .find('input')
+                    .prop('required', true)
+                    .attr('required', 'required');
             }
         });
 
@@ -206,8 +214,6 @@
 
         $('html').on('click', '.btn-remove', function(e) {
             e.preventDefault();
-
-            console.log($(this));
 
             $(this)
                 .parents('.campo_telefone')

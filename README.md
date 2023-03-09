@@ -11,5 +11,3 @@ php artisan db:seed
 ```
 
 Agradeço a oportunidade.
-Att.
-    Guilherme Vahldick

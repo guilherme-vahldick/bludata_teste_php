@@ -10975,7 +10975,7 @@ html {
 }
 
 #site-wrapper .site-footer {
-  margin-top: 25px;
+  margin: 25px 0 30px;
   padding: 10px 15px;
   border: 1px solid #dbd7d7;
   font-size: 0.8em;

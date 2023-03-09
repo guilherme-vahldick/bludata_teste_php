@@ -31,7 +31,7 @@
         <div class="card">
             <div class="card-body">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="nome">Nome Fantasia</label>
                         <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nomeFantasia"
@@ -39,7 +39,7 @@
                         <small id="nomeFantasia" class="form-text text-muted">Digite o nome fantasia por completo da sua empresa.</small>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="estado_id">Estado</label>
                         <select class="custom-select" id="estado_id" name="estado_id" aria-describedby="estadoEmpresa" required>
@@ -53,7 +53,7 @@
                         <small id="estadoEmpresa" class="form-text text-muted">Selecione o estado em que a empresa se localiza.</small>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="cnpj">CNPJ</label>
                         <input type="text" class="form-control mask-cnpj" id="cnpj" name="cnpj" aria-describedby="cnpjEmpresa"

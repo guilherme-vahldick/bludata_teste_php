@@ -16,11 +16,11 @@
                 Projeto desenvolvido como enunciado em <strong>08/03/2023</strong> por <strong>Guilherme Vahldick</strong>, utilizando framework <strong>Laravel 5.6</strong> e <strong>Bootstrap 4</strong>.
             </p>
             <p class="mb-3">
-                Abaixo a lista dos cadastros de <strong>empresa</strong> e <strong>funcionários</strong>:
+                Abaixo a lista dos cadastros de <strong>empresa</strong> e <strong>fornecedores</strong>:
             </p>
             <div class="d-flex">
                 <a href="{{ route('empresa.index')}}" class="btn btn-primary mr-3">Cadastro de Empresa</a>
-                <a href="{{ route('fornecedor.index') }}" class="btn btn-primary">Cadastro de Funcionários</a>
+                <a href="{{ route('fornecedor.index') }}" class="btn btn-primary">Cadastro de Fornecedor</a>
             </div>
         </div>
     </div>

@@ -34,7 +34,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label for="tipo_pessoa">Tipo Pessoa</label> <br />
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline mb-2">
                             <input class="form-check-input tipo_pessoa mr-2" type="radio" name="tipo_pessoa"
                                 id="tipo_pessoa_fisica" value="F"
                                     {{ (!isset($fornecedor)) ? 'checked="checked" ' : '' }}
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nomePessoa"
@@ -61,7 +61,7 @@
                         <small id="nomePessoa" class="form-text text-muted">Digite o nome da pessoa.</small>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="empresa_id">Empresa</label>
                         <select class="custom-select" id="empresa_id" name="empresa_id" aria-describedby="idEmpresa" required>
@@ -75,7 +75,7 @@
                         <small id="idEmpresa" class="form-text text-muted">Selecione a qual empresa pertence esse fornecedor.</small>
                     </div>
                 </div>
-                <div class="col-6 hidde-juridica"
+                <div class="col-md-6 hidde-juridica"
                     {!! (isset($fornecedor) && $fornecedor->tipo_pessoa == 'J') ? ' style="display:none;"' : '' !!}>
                     <div class="form-group">
                         <label for="rg">RG</label>
@@ -84,7 +84,7 @@
                         <small id="rgPessoa" class="form-text text-muted">Digite o número do seu RG conforme seu documento de identidade.</small>
                     </div>
                 </div>
-                <div class="col-6 hidde-juridica"
+                <div class="col-md-6 hidde-juridica"
                     {!! (isset($fornecedor) && $fornecedor->tipo_pessoa == 'J') ? ' style="display:none;"' : '' !!}>
                     <div class="form-group">
                         <label for="data_nascimento">Data de Nascimento</label>
@@ -94,7 +94,7 @@
                         <small id="dataNascimento" class="form-text text-muted">Digite sua data de nascimento em formato 00/00/0000.</small>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="cpf">CPF</label>
                         <input type="text" class="form-control mask-cpf" id="cpf" name="cpf"
@@ -103,7 +103,7 @@
                         <small id="cpfPessoa" class="form-text text-muted">Digite o CPF sem pontuação.</small>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="cnpj">CNPJ</label>
                         <input type="text" class="form-control mask-cnpj" id="cnpj" name="cnpj"
@@ -112,7 +112,7 @@
                         <small id="cnpjPessoa" class="form-text text-muted">Digite o CNPJ sem pontuação.</small>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label>Telefone</label>
                         @php

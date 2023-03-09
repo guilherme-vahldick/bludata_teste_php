@@ -13,6 +13,7 @@ Criar banco de dados, e após criar arquivo .env apontando para o banco, executa
 ```
 php artisan migrate
 php artisan db:seed
+php artisan serv
 ```
 
 Agradeço a oportunidade.
